@@ -467,6 +467,8 @@ class ScatterChartPainter extends AxisChartPainter<ScatterChartData> {
         return ScatterTouchedSpot(spot, i);
       }
     }
-    return null;
+    final sp = FlSpot(localPosition.dx, localPosition.dy);
+    // ScatterSpot(sp.x, sp.y,);
+    return ScatterTouchedSpot(ScatterSpot(sp.x, sp.y,), -1);
   }
 }
